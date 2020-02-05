@@ -42,26 +42,13 @@
     <br>
     <br>
     
-    <table class="table table-hover table-bordered">
-        <thead>
-            <tr>
-                <th>DATA</th>
-                <th>QUANTIDADE</th>
-                <th>VALOR</th>
-                <th>VOLUME</th>
-            </tr>
-        </thead>
-        
-        <tbody>
-        </tbody>
-        
-        <tfoot>
-        </tfoot>
-    </table>
+    <div id="negociacoesView"></div>
+
     <script src="../server/app/models/Negociacao.js"></script>
     <script src="../server/app/controllers/NegociacaoController.js"></script>
     <script src="../server/app/helpers/DateHelper.js"></script>
     <script src="../server/app/models/ListaNegociacoes.js"></script>
+    <script src="../server/app/Views/NegociacoesView.js"></script>
     <script>
         let  negociacaoController = new NegociacaoController();
     </script>

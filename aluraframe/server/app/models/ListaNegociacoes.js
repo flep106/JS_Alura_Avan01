@@ -9,6 +9,7 @@ class Listanegociacoes{
     }
 
     get negociacoes(){
-        return  this._negociacoes;
+        //pega um array vazio e coloca a copia da lista original
+        return  [].concat(this._negociacoes);
     }
 }
