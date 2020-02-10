@@ -28,8 +28,19 @@
                `
             }).join('')}
         </tbody>
-        
+            <td colspan="3"></td>
+            <td>${
+                (function() {
+                //iife calcula o volume
+                let total = 0;
+                model.negociacoes.forEach(n => {
+                    total += n.volume;
+                    return total;
+                });
+            })()
+            }</td> 
         <tfoot>
+
         </tfoot>
     </table>
         `;
