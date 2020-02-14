@@ -33,10 +33,10 @@
                 (function() {
                 //iife calcula o volume
                 let total = 0;
-                model.negociacoes.forEach(n => {
+                modelo.negociacoes.forEach(n => {
                     total += n.volume;
-                    return total;
                 });
+                return total;
             })()
             }</td> 
         <tfoot>
