@@ -30,15 +30,10 @@
         </tbody>
             <td colspan="3"></td>
             <td>${
-                (function() {
-                //iife calcula o volume
-                let total = 0;
-                modelo.negociacoes.forEach(n => {
-                    total += n.volume;
-                });
-                return total;
-            })()
-            }</td> 
+                modelo.negociacoes.reduce(function(total, n){
+                    return total + n.volume;
+            }, 0.0)
+        }</td> 
         <tfoot>
 
         </tfoot>
