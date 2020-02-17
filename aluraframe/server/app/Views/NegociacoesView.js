@@ -30,10 +30,7 @@
         </tbody>
             <td colspan="3"></td>
             <td>${
-                modelo.negociacoes.reduce(function(total, n){
-                    //reduce recebe um array e retorna 1 resultado
-                    return total + n.volume;
-            }, 0.0)// total inicializado com 0
+                modelo.negociacoes.reduce((total, n) => total + n.volume, 0.0)// por arrow function
         }</td> 
         <tfoot>
 
