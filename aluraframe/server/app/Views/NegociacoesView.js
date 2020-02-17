@@ -28,7 +28,7 @@
                `
             }).join('')}
         </tbody>
-            <td colspan="3"></td>
+            <td colspan="3">Total</td>
             <td>${
                 modelo.negociacoes.reduce((total, n) => total + n.volume, 0.0)// por arrow function
         }</td> 
