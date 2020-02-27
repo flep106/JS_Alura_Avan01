@@ -9,16 +9,24 @@ class NegociacaoController{
         this._negocicoesView = new NegociacaoView($('#negociacoesView'));
         
         this._negocicoesView.update(this._listaNegociacoes);
-
+        
+        this._mensagem = new Mensagem();
+        //essa diz onde vc quer incluir na view a mensagem
+        this._mensagemView = new MensagemView($('#mensagemView'));
+        this._mensagemView.update(this._mensagem);
+        
+        this._limpaFormulario();
     }
 
     adiciona(event){
         //segura o form no botao incluir
         event.preventDefault();
         this._listaNegociacoes.adiciona(this._criaNegociacao());
-        this._limpaFormulario();
-
         this._negocicoesView.update(this._listaNegociacoes);
+
+        this._mensagem.texto = 'Negociação Adicionada com sucesso!';
+        this._mensagemView.update(this._mensagem);
+        this._limpaFormulario();
             
     }
 
