@@ -5,7 +5,8 @@ class MensagemView{
     }
 
     _template(modelo){
-        return`<p class="alert alert-info">${modelo.texto}</p>`;
+        //retirada caixa azul em branco
+        return modelo.texto ? `<p class="alert alert-info">${modelo.texto}</p>`: '<p></p>';
     }
 
     update(modelo){
