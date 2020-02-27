@@ -1,6 +1,7 @@
 class MensagemView{
+
     constructor(elemento){
-        this._elemento = this.elemento;
+        this._elemento = elemento;
     }
 
     _template(modelo){
